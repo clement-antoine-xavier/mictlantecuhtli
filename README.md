@@ -1,8 +1,8 @@
-# Thanatos – Animal Mortality Surveillance Platform
+# Mictlantecuhtli – Animal Mortality Surveillance Platform
 
 ## Project Overview
 
-Thanatos is a platform designed to strengthen **animal epidemiological surveillance** by leveraging **animal mortality data** as an early-warning signal for unusual health events.
+Mictlantecuhtli is a platform designed to strengthen **animal epidemiological surveillance** by leveraging **animal mortality data** as an early-warning signal for unusual health events.
 
 Faced with heterogeneous animal health data and practical constraints in the field, the goal is to build **automated, high‑performance tools for data management, analysis, and modelling**.
 
