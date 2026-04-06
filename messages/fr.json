@@ -1,0 +1,100 @@
+{
+  "layout": {
+    "title": "Mictlantecuhtli",
+    "description": "Mictlantecuhtli est une plateforme conçue pour renforcer la surveillance épidémiologique animale en exploitant les données de mortalité animale comme signal d'alerte précoce pour des événements sanitaires inhabituels."
+  },
+  "dashboard": {
+    "shell": {
+      "title": "Tableau de bord de surveillance",
+      "subtitle": "Surveillez en temps quasi réel les indicateurs de mortalité, les signaux d'anomalie et la qualité des données.",
+      "menu": "Menu",
+      "export": "Exporter",
+      "generateBulletin": "Générer le bulletin",
+      "englishLabel": "EN",
+      "frenchLabel": "FR",
+      "sidebarTitle": "Mictlantecuhtli",
+      "sidebarSubtitle": "Surveillance de la mortalité animale"
+    },
+    "navigation": {
+      "overview": "Vue d'ensemble",
+      "dataIntegration": "Intégration des données",
+      "mortalityRecords": "Registres de mortalité",
+      "indicators": "Indicateurs",
+      "alerts": "Alertes",
+      "modeling": "Modélisation",
+      "settings": "Paramètres"
+    },
+    "kpis": {
+      "mortalityRate": "Taux de mortalité",
+      "reportedDeaths": "Décès signalés",
+      "openAlerts": "Alertes ouvertes",
+      "dataCompleteness": "Complétude des données"
+    },
+    "mortalityTrend": {
+      "title": "Tendance de mortalité",
+      "period": "30 derniers jours"
+    },
+    "pipelineTasks": {
+      "title": "Tâches du pipeline",
+      "openQueue": "Ouvrir la file de traitement",
+      "tasks": {
+        "validateBdniDailyImport": "Valider l'import quotidien BDNI",
+        "runWeeklyAnomalyDetection": "Lancer la détection hebdomadaire d'anomalies",
+        "reviewSigalResytalOutliers": "Examiner les valeurs aberrantes SIGAL/RESYTAL",
+        "updateSpeciesMetadataMapping": "Mettre à jour le mapping des métadonnées d'espèces"
+      }
+    },
+    "signals": {
+      "title": "Derniers signaux",
+      "columns": {
+        "id": "Identifiant du signal",
+        "species": "Espèce",
+        "region": "Région",
+        "status": "Statut"
+      },
+      "species": {
+        "cattle": "Bovins",
+        "poultry": "Volaille",
+        "swine": "Porcs",
+        "sheep": "Moutons",
+        "goats": "Chèvres"
+      },
+      "regions": {
+        "occitanie": "Occitanie",
+        "bretagne": "Bretagne",
+        "paysDeLaLoire": "Pays de la Loire",
+        "grandEst": "Grand Est",
+        "normandie": "Normandie"
+      },
+      "statuses": {
+        "validated": "Validé",
+        "pendingReview": "En revue",
+        "highRisk": "Risque élevé",
+        "closed": "Fermé"
+      }
+    },
+    "activity": {
+      "title": "Activité de surveillance",
+      "time": "Aujourd'hui à {hour}:{minute} AM",
+      "items": {
+        "bovineMortalityClusterDetected": "Cluster de mortalité bovine détecté en Nouvelle-Aquitaine",
+        "nightlyEtlCompleted": "ETL nocturne terminé pour les sources BDNI et SPE",
+        "alertsEscalatedToReview": "2 alertes transmises à l'épidémiologiste pour revue",
+        "dashboardCacheRefreshed": "Cache du tableau de bord régional actualisé avec succès"
+      }
+    }
+  },
+  "loading": {
+    "title": "Chargement du tableau de bord",
+    "description": "Récupération des dernières données de surveillance."
+  },
+  "error": {
+    "title": "Une erreur est survenue",
+    "description": "Le tableau de bord n'a pas pu être chargé.",
+    "retry": "Réessayer"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "La page demandée n'existe pas."
+  }
+}

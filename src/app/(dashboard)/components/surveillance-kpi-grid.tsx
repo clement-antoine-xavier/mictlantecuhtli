@@ -1,16 +1,19 @@
 import { Card, CardContent, Chip, Grid, Stack, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 import { surveillanceKpis } from "../data";
 
 export default function SurveillanceKpiGrid() {
+  const t = useTranslations("dashboard");
+
   return (
     <>
       {surveillanceKpis.map((stat) => (
-        <Grid key={stat.label} size={{ xs: 12, sm: 6, lg: 3 }}>
+        <Grid key={stat.labelKey} size={{ xs: 12, sm: 6, lg: 3 }}>
           <Card sx={{ height: "100%" }}>
             <CardContent>
               <Typography variant="body2" color="text.secondary" gutterBottom>
-                {stat.label}
+                {t(`kpis.${stat.labelKey}`)}
               </Typography>
               <Stack direction="row" justifyContent="space-between" alignItems="baseline">
                 <Typography variant="h4" fontWeight={700}>

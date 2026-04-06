@@ -1,10 +1,16 @@
 import { Avatar, Box, Button, Paper, Stack, Typography } from "@mui/material";
+import { useLocale, useTranslations } from "next-intl";
+
+import LocaleSwitcher from "./locale-switcher";
 
 type SurveillanceHeaderProps = {
   onOpenMobileDrawer: () => void;
 };
 
 export default function SurveillanceHeader({ onOpenMobileDrawer }: SurveillanceHeaderProps) {
+  const t = useTranslations("dashboard.shell");
+  const locale = useLocale();
+
   return (
     <Paper
       square
@@ -25,22 +31,23 @@ export default function SurveillanceHeader({ onOpenMobileDrawer }: SurveillanceH
             onClick={onOpenMobileDrawer}
             sx={{ display: { xs: "inline-flex", md: "none" } }}
           >
-            Menu
+            {t("menu")}
           </Button>
           <Box>
             <Typography variant="h4" fontWeight={700}>
-              Surveillance Dashboard
+              {t("title")}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Monitor mortality indicators, anomaly signals, and data quality in near real time.
+              {t("subtitle")}
             </Typography>
           </Box>
         </Stack>
-        <Stack direction="row" spacing={1}>
+        <Stack direction="row" alignItems="center" spacing={1}>
+          <LocaleSwitcher currentLocale={locale} englishLabel={t("englishLabel")} frenchLabel={t("frenchLabel")} />
           <Button variant="outlined" sx={{ display: { xs: "none", sm: "inline-flex" } }}>
-            Export
+            {t("export")}
           </Button>
-          <Button variant="contained">Generate Bulletin</Button>
+          <Button variant="contained">{t("generateBulletin")}</Button>
           <Avatar sx={{ width: 32, height: 32 }}>TH</Avatar>
         </Stack>
       </Stack>

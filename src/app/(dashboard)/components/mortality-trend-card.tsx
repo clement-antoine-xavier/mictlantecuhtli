@@ -1,8 +1,11 @@
 import { Box, Card, CardContent, Chip, Grid, Stack, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 import { mortalityTrendHeights } from "../data";
 
 export default function MortalityTrendCard() {
+  const t = useTranslations("dashboard.mortalityTrend");
+
   return (
     <Grid size={{ xs: 12, lg: 8 }}>
       <Card>
@@ -15,9 +18,9 @@ export default function MortalityTrendCard() {
             mb={2}
           >
             <Typography variant="h6" fontWeight={700}>
-              Mortality Trend
+              {t("title")}
             </Typography>
-            <Chip label="Last 30 days" size="small" />
+            <Chip label={t("period")} size="small" />
           </Stack>
           <Stack direction="row" spacing={1} alignItems="flex-end" sx={{ height: 240 }}>
             {mortalityTrendHeights.map((height, index) => (

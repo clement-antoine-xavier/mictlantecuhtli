@@ -1,0 +1,100 @@
+{
+  "layout": {
+    "title": "Mictlantecuhtli",
+    "description": "Mictlantecuhtli is a platform designed to strengthen animal epidemiological surveillance by leveraging animal mortality data as an early-warning signal for unusual health events."
+  },
+  "dashboard": {
+    "shell": {
+      "title": "Surveillance Dashboard",
+      "subtitle": "Monitor mortality indicators, anomaly signals, and data quality in near real time.",
+      "menu": "Menu",
+      "export": "Export",
+      "generateBulletin": "Generate Bulletin",
+      "englishLabel": "EN",
+      "frenchLabel": "FR",
+      "sidebarTitle": "Mictlantecuhtli",
+      "sidebarSubtitle": "Animal Mortality Surveillance"
+    },
+    "navigation": {
+      "overview": "Overview",
+      "dataIntegration": "Data Integration",
+      "mortalityRecords": "Mortality Records",
+      "indicators": "Indicators",
+      "alerts": "Alerts",
+      "modeling": "Modeling",
+      "settings": "Settings"
+    },
+    "kpis": {
+      "mortalityRate": "Mortality Rate",
+      "reportedDeaths": "Reported Deaths",
+      "openAlerts": "Open Alerts",
+      "dataCompleteness": "Data Completeness"
+    },
+    "mortalityTrend": {
+      "title": "Mortality Trend",
+      "period": "Last 30 days"
+    },
+    "pipelineTasks": {
+      "title": "Pipeline Tasks",
+      "openQueue": "Open processing queue",
+      "tasks": {
+        "validateBdniDailyImport": "Validate BDNI daily import",
+        "runWeeklyAnomalyDetection": "Run weekly anomaly detection",
+        "reviewSigalResytalOutliers": "Review SIGAL/RESYTAL outliers",
+        "updateSpeciesMetadataMapping": "Update species metadata mapping"
+      }
+    },
+    "signals": {
+      "title": "Latest Signals",
+      "columns": {
+        "id": "Signal ID",
+        "species": "Species",
+        "region": "Region",
+        "status": "Status"
+      },
+      "species": {
+        "cattle": "Cattle",
+        "poultry": "Poultry",
+        "swine": "Swine",
+        "sheep": "Sheep",
+        "goats": "Goats"
+      },
+      "regions": {
+        "occitanie": "Occitanie",
+        "bretagne": "Bretagne",
+        "paysDeLaLoire": "Pays de la Loire",
+        "grandEst": "Grand Est",
+        "normandie": "Normandie"
+      },
+      "statuses": {
+        "validated": "Validated",
+        "pendingReview": "Pending Review",
+        "highRisk": "High Risk",
+        "closed": "Closed"
+      }
+    },
+    "activity": {
+      "title": "Surveillance Activity",
+      "time": "Today at {hour}:{minute} AM",
+      "items": {
+        "bovineMortalityClusterDetected": "Bovine mortality cluster detected in Nouvelle-Aquitaine",
+        "nightlyEtlCompleted": "Nightly ETL completed for BDNI and SPE sources",
+        "alertsEscalatedToReview": "2 alerts escalated to epidemiologist review",
+        "dashboardCacheRefreshed": "Regional dashboard cache refreshed successfully"
+      }
+    }
+  },
+  "loading": {
+    "title": "Loading dashboard",
+    "description": "Fetching the latest surveillance data."
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "The dashboard could not be loaded.",
+    "retry": "Try again"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The requested page does not exist."
+  }
+}

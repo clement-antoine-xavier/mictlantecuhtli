@@ -4,6 +4,9 @@ import { Roboto } from "next/font/google";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
+
 import theme from "@/theme";
 
 const roboto = Roboto({
@@ -13,23 +16,30 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-export const metadata: Metadata = {
-  title: "Mictlantecuhtli",
-  description:
-    "Mictlantecuhtli is a platform designed to strengthen animal epidemiological surveillance by leveraging animal mortality data as an early-warning signal for unusual health events.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const translation = await getTranslations("layout");
 
-export default function RootLayout({
+  return {
+    title: translation("title"),
+    description: translation("description"),
+  };
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [locale, messages] = await Promise.all([getLocale(), getMessages()]);
+
   return (
-    <html lang="en" className={roboto.variable}>
+    <html lang={locale} className={roboto.variable}>
       <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
-            {children}
+            <NextIntlClientProvider locale={locale} messages={messages}>
+              {children}
+            </NextIntlClientProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
